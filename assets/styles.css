@@ -69,3 +69,21 @@ section.cookies{
     height: 60px;
   }
 }
+.cookieCont {
+    display: flex;
+    justify-content: center;
+}
+.tableCart {
+    width: 50%;
+    background-color: #343a40;
+    color: white;
+    border-style: solid;
+    border-color: #454d55;
+}
+th, tr, td {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    text-align: center;
+    border-style: solid;
+    border-color: #454d55;
+}

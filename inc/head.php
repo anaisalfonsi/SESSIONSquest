@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +29,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">
-                    <img class="pull-left" src="assets/img/cookie_funny_clipart.png" alt="The Cookies Factory logo">
+                    <img class="pull-left" src="assets/img/cookie.gif" alt="The Cookies Factory logo">
                     <h1>The Cookies Factory</h1>
                 </a>
             </div>
@@ -43,11 +46,18 @@
                             Cart
                         </a>
                     </li>
+                    <li>
+                    <a href="/logout.php" class="btn btn-warning navbar-btn" onClick="">
+                        <span class="glyphicon glyphicon" aria-hidden="true"></span>LOGOUT</a>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-    <div class="container-fluid text-right">
-        <strong>Hello Wilder !</strong>
+    <div class="container-fluid text-left">
+        <h3><?php if(isset($_SESSION['login'])) {
+            echo $_SESSION['login'];
+        } ?>
+        </h3>
     </div>
 </header>
